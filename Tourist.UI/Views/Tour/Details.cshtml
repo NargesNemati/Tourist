@@ -1,0 +1,48 @@
+﻿@model Tourist.UI.Models.TourDetailsViewModel
+
+<h2>@Model.Tour.Name</h2>
+<p><strong>Description:</strong> @Model.Tour.Description</p>
+<p><strong>Location:</strong> @Model.Tour.Destination</p>
+<p><strong>Price:</strong> $@Model.Tour.Price</p>
+
+<hr />
+<h3>Reviews</h3>
+<form asp-controller="Bookings" asp-action="Create" method="post">
+    <input type="hidden" name="tourId" value="@Model.Tour.Id" />
+    <button type="submit" class="btn btn-success">رزرو تور</button>
+</form>
+
+
+<a href="@Url.Action("Index", "Home")" class="btn btn-secondary">بازگشت به لیست تورها</a>
+
+@if (Model.Reviews != null && Model.Reviews.Count > 0)
+{
+    foreach (var review in Model.Reviews)
+    {
+        <div class="border p-2 mb-2">
+            <strong>Rating:</strong> @review.Rating<br />
+            <strong>Comment:</strong> @review.Comment<br />
+        </div>
+    }
+}
+else
+{
+    <p>No reviews yet.</p>
+}
+
+<h3>ثبت نظر</h3>
+<form asp-action="AddReview" asp-controller="Tour" method="post">
+    <input type="hidden" name="TourId" value="@Model.Tour.Id" />
+
+    <div class="mb-2">
+        <label>امتیاز (1 تا 5):</label>
+        <input type="number" name="Rating" class="form-control" min="1" max="5" required />
+    </div>
+
+    <div class="mb-2">
+        <label>نظر:</label>
+        <textarea name="Comment" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">ارسال</button>
+</form>

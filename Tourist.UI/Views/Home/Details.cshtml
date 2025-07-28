@@ -1,0 +1,15 @@
+﻿@model Tourist.UI.Models.Dto.TourDto
+
+<h2>@Model.Destination</h2>
+
+<p><strong>مقصد:</strong> @Model.Destination</p>
+<p><strong>قیمت:</strong> @Model.Price تومان</p>
+<p><strong>تاریخ شروع:</strong> @Model.StartDate.ToShortDateString()</p>
+
+<form asp-controller="Bookings" asp-action="Create" method="post">
+    <input type="hidden" name="tourId" value="@Model.Id" />
+    <button type="submit" class="btn btn-success">رزرو تور</button>
+</form>
+
+
+<a href="@Url.Action("Index", "Home")" class="btn btn-secondary">بازگشت به لیست تورها</a>

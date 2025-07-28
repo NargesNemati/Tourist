@@ -1,0 +1,12 @@
+﻿@model Tourist.UI.Models.Dto.RegisterRequestDto
+
+<form asp-action="Register" method="post">
+    <input asp-for="Username" placeholder="نام کاربری" class="form-control" />
+    <input asp-for="Password" type="password" placeholder="رمز عبور" class="form-control" />
+    <input asp-for="FullName" placeholder="نام کامل" class="form-control" />
+    <input asp-for="BirthDay" type="date" class="form-control" />
+
+    <button type="submit" class="btn btn-primary">ثبت‌نام</button>
+</form>
+
+<div asp-validation-summary="All" class="text-danger"></div>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourist.API", "Tourist.API\Tourist.API.csproj", "{0ED50DAB-4841-4FC8-9C6D-0F04CD42E169}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourist.UI", "Tourist.UI\Tourist.UI.csproj", "{55949D94-14DB-4B44-8888-938E3190D5E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ED50DAB-4841-4FC8-9C6D-0F04CD42E169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED50DAB-4841-4FC8-9C6D-0F04CD42E169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED50DAB-4841-4FC8-9C6D-0F04CD42E169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED50DAB-4841-4FC8-9C6D-0F04CD42E169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55949D94-14DB-4B44-8888-938E3190D5E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55949D94-14DB-4B44-8888-938E3190D5E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55949D94-14DB-4B44-8888-938E3190D5E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55949D94-14DB-4B44-8888-938E3190D5E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3B8F61A-BC74-4ACF-AE48-7B8669D0D331}
+	EndGlobalSection
+EndGlobal

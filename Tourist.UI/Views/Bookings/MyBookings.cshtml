@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Tourist.UI.Models.Dto.BookingDto>
+
+<h2 class="m-3">رزروهای من</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <p>هیچ رزروی انجام نداده‌اید.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>عنوان تور</th>
+                <th>تاریخ رزرو</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in Model)
+            {
+                <tr>
+                    <td>@booking.TourDescription</td>
+                    <td>@booking.BookingDate.ToString("yyyy/MM/dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

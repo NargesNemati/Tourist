@@ -1,0 +1,7 @@
+﻿@model Tourist.UI.Models.Dto.LoginRequestDto
+
+<form asp-action="Login" method="post">
+    <input asp-for="Username" placeholder="نام کاربری" />
+    <input asp-for="Password" type="password" placeholder="رمز عبور" />
+    <button type="submit">ورود</button>
+</form>
